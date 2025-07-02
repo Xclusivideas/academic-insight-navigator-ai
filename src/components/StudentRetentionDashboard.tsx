@@ -18,8 +18,8 @@ const mockStudentsAtRisk: StudentAtRisk[] = [
     id: "STU001",
     name: "Sarah Johnson",
     riskLevel: 'high',
-    factors: ["Low GPA (2.1)", "Multiple course withdrawals", "Irregular attendance"],
-    recommendations: ["Academic tutoring", "Counseling support", "Course load reduction"],
+    factors: ["<strong>Low GPA</strong>: 2.1", "Multiple course withdrawals", "<em>Irregular attendance</em> patterns"],
+    recommendations: ["<strong>Academic tutoring</strong> program enrollment", "Counseling support for <em>stress management</em>", "Course load reduction to <strong>12 credits maximum</strong>"],
     gpa: 2.1,
     program: "Computer Science",
     year: 2
@@ -28,8 +28,8 @@ const mockStudentsAtRisk: StudentAtRisk[] = [
     id: "STU002",
     name: "Michael Chen",
     riskLevel: 'medium',
-    factors: ["Declining grades", "Financial stress indicators"],
-    recommendations: ["Financial aid consultation", "Study skills workshop"],
+    factors: ["<strong>Declining grades</strong> trend", "Financial stress indicators"],
+    recommendations: ["<em>Financial aid consultation</em> within 2 weeks", "Study skills workshop enrollment"],
     gpa: 2.8,
     program: "Business Administration",
     year: 3
@@ -39,7 +39,7 @@ const mockStudentsAtRisk: StudentAtRisk[] = [
     name: "Emma Rodriguez",
     riskLevel: 'low',
     factors: ["Course load adjustment needed"],
-    recommendations: ["Academic advisor meeting"],
+    recommendations: ["<strong>Academic advisor</strong> meeting scheduled"],
     gpa: 3.4,
     program: "Psychology",
     year: 1

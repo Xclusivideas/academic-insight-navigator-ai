@@ -53,9 +53,11 @@ export const AnalysisOutput = ({ result }: AnalysisOutputProps) => {
                     <TableCell>
                       <div className="space-y-1">
                         {student.factors.slice(0, 2).map((factor, index) => (
-                          <div key={index} className="text-sm text-muted-foreground">
-                            • {factor}
-                          </div>
+                          <div 
+                            key={index} 
+                            className="text-sm text-muted-foreground"
+                            dangerouslySetInnerHTML={{ __html: `• ${factor}` }}
+                          />
                         ))}
                         {student.factors.length > 2 && (
                           <div className="text-xs text-muted-foreground">
@@ -82,7 +84,10 @@ export const AnalysisOutput = ({ result }: AnalysisOutputProps) => {
             {result.recommendations.map((recommendation, index) => (
               <li key={index} className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span className="text-foreground">{recommendation}</span>
+                <span 
+                  className="text-foreground"
+                  dangerouslySetInnerHTML={{ __html: recommendation }}
+                />
               </li>
             ))}
           </ul>
