@@ -3,8 +3,8 @@ import { LyzrApiRequest, LyzrApiResponse } from '@/types';
 const API_ENDPOINT = 'https://agent-prod.studio.lyzr.ai/v3/inference/chat/';
 const API_KEY = 'sk-default-9BsmbXgZRPqWgKPKqmGEUzO8qeWPHdiw';
 const USER_ID = 'alastair.horn@transformationsolutions.co.uk';
-const AGENT_ID = '686581ed4415fe2a9d674ff7';
-const SESSION_ID = '686581ed4415fe2a9d674ff7-qs56g2odn';
+const AGENT_ID = '686588c437f3156844594c7f';
+const SESSION_ID = '686588c437f3156844594c7f-0p8bwmg9umtb';
 
 export class LyzrApiService {
   static async sendMessage(message: string): Promise<LyzrApiResponse> {
@@ -19,7 +19,7 @@ export class LyzrApiService {
       const response = await fetch(API_ENDPOINT, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${API_KEY}`,
+          'x-api-key': API_KEY,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(requestData),
